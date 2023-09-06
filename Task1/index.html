@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Sports Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Adventure Sports Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#sports">Sports</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="sports">
+        <h2>Choose Your Adventure</h2>
+        <div class="sport-cards">
+            <div class="sport-card">
+                <div class="card-image">
+                    <img src="pexels-julie-aagaard-2097110.jpg" alt="Sport 1">
+                </div>
+                <h3>Sking</h3>
+                <p>Price: $100</p>
+                <button>Book Now</button>
+            </div>
+            <div class="sport-card">
+                <div class="card-image">
+                    <img src="pexels-allec-gomes-9173502.jpg" alt="Sport 2">
+                </div>
+                <h3>Paragliding</h3>
+                <p>Price: $150</p>
+                <button>Book Now</button>
+            </div>
+            <div class="sport-card">
+                <div class="card-image">
+                    <img src="pexels-daniel-torobekov-5560867.jpg" alt="Sport 3">
+                </div>
+                <h3>Surfing</h3>
+                <p>Price: $120</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="location">
+        <h2>Our Location</h2>
+        <p>We are located in a beautiful place where you can enjoy breathtaking views while experiencing your adventure. Visit us at:</p>
+        <address>
+            123 Adventure Street<br>
+            Adventure City, AD 12345<br>
+            Phone: (123) 456-7890
+        </address>
+    </section>
+    <div id="map" style= "height: 400px;"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    
+    <script>
+        var map_parameters = { center: {lat: 47.490, lng: -117.585}, zoom: 8 };
+        var map = new google.maps.Map(document.getElementById('map'), map_parameters);
+    
+        var position1 = { position: {lat: 47.490, lng: 117.585}, map: map };
+        var position2 = { position: {lat: 47.661, lng: 117.404}, map: map };
+    
+        var marker1 = new google.maps.Marker(position1);
+        var marker2 = new google.maps.Marker(position2);
+    </script>
+    
+    <footer id="footer">
+        <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="pngwing.com (1).png" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2023 Adventure Sports Booking. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
